@@ -1,0 +1,425 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #eef2ff, #f8fafc, #e0f2fe);
+  color: #1e293b;
+}
+
+/* =========================
+   MAIN PAGE
+========================= */
+
+.app {
+  min-height: 100vh;
+  padding: 45px 20px 70px;
+}
+
+.container {
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.header-icon {
+  font-size: 45px;
+  margin-bottom: 5px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 42px;
+  font-weight: 700;
+  color: #172554;
+}
+
+.header p {
+  margin: 10px 0 0;
+  color: #64748b;
+  font-size: 17px;
+}
+
+/* =========================
+   FORM CARD
+========================= */
+
+.card {
+  background: rgba(255, 255, 255, 0.96);
+  padding: 35px 40px;
+  border-radius: 22px;
+  box-shadow: 0 15px 40px rgba(15, 23, 42, 0.10);
+  border: 1px solid #e2e8f0;
+}
+
+.card-title {
+  margin-bottom: 28px;
+}
+
+.card-title h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #1e293b;
+}
+
+.card-title span {
+  display: block;
+  margin-top: 5px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  width: 130px;
+  flex-shrink: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.form-group input {
+  flex: 1;
+  height: 50px;
+  padding: 0 16px;
+  border: 1.5px solid #dbe2ea;
+  border-radius: 10px;
+  background: #f8fafc;
+  font-size: 15px;
+  color: #1e293b;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.form-group input::placeholder {
+  color: #94a3b8;
+}
+
+.form-group input:hover {
+  border-color: #a5b4fc;
+  background: white;
+}
+
+.form-group input:focus {
+  border-color: #4f46e5;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.10);
+}
+
+/* =========================
+   FORM BUTTONS
+========================= */
+
+.form-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.add-button,
+.update-button {
+  flex: 1;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.add-button {
+  background: linear-gradient(135deg, #4f46e5, #2563eb);
+}
+
+.update-button {
+  background: linear-gradient(135deg, #059669, #047857);
+}
+
+.add-button:hover,
+.update-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.20);
+}
+
+.cancel-button {
+  width: 140px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  background: #e2e8f0;
+  color: #334155;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cancel-button:hover {
+  background: #cbd5e1;
+}
+
+/* =========================
+   MESSAGE
+========================= */
+
+.message {
+  margin-top: 18px;
+  padding: 11px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  background: #f1f5f9;
+}
+
+/* =========================
+   STUDENT SECTION
+========================= */
+
+.students-section {
+  margin-top: 38px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.section-header h2 {
+  margin: 0;
+  font-size: 27px;
+  color: #172554;
+}
+
+.section-header p {
+  margin: 5px 0 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.student-count {
+  padding: 8px 15px;
+  border-radius: 20px;
+  background: #e0e7ff;
+  color: #3730a3;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.no-students {
+  background: white;
+  padding: 45px 20px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+}
+
+.empty-icon {
+  font-size: 40px;
+}
+
+.no-students h3 {
+  margin: 12px 0 5px;
+  color: #334155;
+}
+
+.no-students p {
+  margin: 0;
+  color: #64748b;
+}
+
+/* =========================
+   STUDENT LIST
+========================= */
+
+.student-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.student-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 7px 22px rgba(15, 23, 42, 0.07);
+  transition: 0.2s ease;
+}
+
+.student-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.11);
+}
+
+/* Student number */
+
+.student-number {
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #eef2ff;
+  color: #4338ca;
+  font-weight: 700;
+}
+
+/* Student information */
+
+.student-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.student-info h3 {
+  margin: 0 0 10px;
+  font-size: 19px;
+  color: #1e293b;
+}
+
+.student-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.student-details span {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.student-details strong {
+  color: #334155;
+}
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.edit-button,
+.delete-button {
+  border: none;
+  padding: 9px 13px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.edit-button {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.edit-button:hover {
+  background: #bae6fd;
+}
+
+.delete-button {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.delete-button:hover {
+  background: #fecaca;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+  .app {
+    padding: 30px 15px;
+  }
+
+  .header h1 {
+    font-size: 32px;
+  }
+
+  .card {
+    padding: 25px 20px;
+  }
+
+  .form-group {
+    display: block;
+  }
+
+  .form-group label {
+    display: block;
+    width: auto;
+    margin-bottom: 8px;
+  }
+
+  .form-group input {
+    width: 100%;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+  }
+
+  .cancel-button {
+    width: 100%;
+  }
+
+  .section-header {
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .student-card {
+    align-items: flex-start;
+  }
+
+  .student-details {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+}
